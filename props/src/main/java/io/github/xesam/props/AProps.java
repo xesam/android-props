@@ -1,4 +1,4 @@
-package io.github.xesam.android.props;
+package io.github.xesam.props;
 
 import android.util.Log;
 

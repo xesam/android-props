@@ -1,4 +1,4 @@
-package io.github.xesam.android.props;
+package io.github.xesam.props;
 
 /**
  * Created by xe on 18-1-2.

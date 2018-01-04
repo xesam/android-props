@@ -8,9 +8,7 @@ import android.widget.TextView;
 
 import java.io.File;
 
-import io.github.xesam.android.props.AProps;
-import io.github.xesam.android.props.R;
-import io.github.xesam.android.props.demo.Api;
+import io.github.xesam.props.AProps;
 
 public class MainActivity extends AppCompatActivity {
 
