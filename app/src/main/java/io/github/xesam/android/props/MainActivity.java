@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.inspect).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                File file = new File(Environment.getExternalStorageDirectory(), "android.props");
+                File file = new File(Environment.getExternalStorageDirectory(), "props_1.txt");
                 AProps props = new AProps(file);
                 props.setClass(Api.class, "HOST", "192.168.1.2");
                 Api api = new Api();
                 props.setObject(api, "port", 90);
-                vContent.setText(Api.HOST + ":" + api.port);
+                vContent.setText(Api.HOST + ":" + api.port + "/" + props.getValue("key1", "default"));
             }
         });
     }

@@ -31,7 +31,7 @@ public class AProps implements IProps {
                 if (eles.length < 2) {
                     continue;
                 }
-                mData.put(eles[2].trim(), eles[1].trim());
+                mData.put(eles[0].trim(), eles[1].trim());
             }
         } catch (Exception e) {
             e.printStackTrace();
