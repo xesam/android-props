@@ -3,9 +3,12 @@ package io.github.xesam.android.props;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import java.io.File;
+
+import io.github.xesam.android.props.cfg.Api;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.inspect).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AProps props = new AProps();
-                Log.e("r", Environment.getExternalStorageDirectory().toString());
-//                props.load("");
-                vContent.setText(props.getString("key1"));
+                File file = new File(Environment.getExternalStorageDirectory(), "android.props");
+                AProps props = new AProps(file);
+                props.setClass(Api.class, "HOST", "192.168.1.2");
+                Api api = new Api();
+                props.setObject(api, "port", 90);
+                vContent.setText(Api.HOST + ":" + api.port);
             }
         });
     }

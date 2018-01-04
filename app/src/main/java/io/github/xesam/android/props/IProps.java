@@ -5,7 +5,4 @@ package io.github.xesam.android.props;
  */
 
 public interface IProps {
-    String getString(String key);
-
-    <T> T getValue(String key, T clazz);
 }
