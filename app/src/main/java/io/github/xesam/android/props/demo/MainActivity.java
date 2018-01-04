@@ -1,4 +1,4 @@
-package io.github.xesam.android.props;
+package io.github.xesam.android.props.demo;
 
 import android.os.Bundle;
 import android.os.Environment;
@@ -8,7 +8,9 @@ import android.widget.TextView;
 
 import java.io.File;
 
-import io.github.xesam.android.props.cfg.Api;
+import io.github.xesam.android.props.AProps;
+import io.github.xesam.android.props.R;
+import io.github.xesam.android.props.demo.Api;
 
 public class MainActivity extends AppCompatActivity {
 
